@@ -39,5 +39,14 @@ void loop() {
             Serial.print("Servo moved to: ");
             Serial.print(targetAngle);
             Serial.println(" degrees");
+            else {
+
+            // Error message
+            Serial.println("ERROR: Invalid angle! Enter value between 0 - 180.");
+        }
+
+        // Small delay for stability
+        delay(20);
+         }
 
 }
