@@ -30,5 +30,14 @@ void loop() {
 
         // Read integer angle input
         targetAngle = Serial.parseInt();
+         if (targetAngle >= 0 && targetAngle <= 180) {
+
+            // Move servo
+            axisServo.write(targetAngle);
+
+            // Confirmation message
+            Serial.print("Servo moved to: ");
+            Serial.print(targetAngle);
+            Serial.println(" degrees");
 
 }
