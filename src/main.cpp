@@ -10,7 +10,17 @@ const int SERVO_PIN = 9;
 int targetAngle = 0;
 
 void setup() {
-// write your initialization code here
+     // Initialize Serial communication
+    Serial.begin(9600);
+
+    // Attach servo to PWM pin
+    axisServo.attach(SERVO_PIN);
+
+    // Print system initialization message
+    Serial.println("=================================");
+    Serial.println(" MG995 Axis Control System Ready ");
+    Serial.println(" Enter angle between 0 - 180 ");
+    Serial.println("=================================");
 }
 
 
